@@ -38,7 +38,9 @@ function sortearAmigo() {
 
     // Exibindo o nome sorteado na lista de resultado
     let resultado = document.getElementById('resultado');
-    resultado.innerHTML = `<li>O seu amigo secreto é: ${nomeSorteado}!</li>`;
+    let itemResultado = document.createElement('li');
+    itemResultado.textContent = `O seu amigo secreto é: ${nomeSorteado}!`;
+    resultado.replaceChildren(itemResultado);
 
     // Limpando a lista de amigos após o sorteio
     listaAmigos.length = 0; 
